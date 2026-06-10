@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Open World Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+</head>
+<body>
+  <div id="menu">
+    <h1>OPEN WORLD</h1>
+    <p>Monedas: <span id="coins">1000</span></p>
+    <button id="playBtn">JUGAR</button>
+    <button id="resetBtn">REINICIAR</button>
+  </div>
 
+  <div id="hud">
+    <div>Vida: <span id="health">100</span></div>
+    <div>Dinero: <span id="money">1000</span></div>
+    <div>Misión: <span id="mission">Elimina 5 NPC</span></div>
+    <div>Kills: <span id="kills">0</span>/5</div>
+  </div>
+
+  <div id="adminPanel">
+    <h3>Panel Creador</h3>
+    <button onclick="addMoney()">+1000 dinero</button>
+    <button onclick="healPlayer()">Curar</button>
+    <button onclick="spawnNPC()">Crear NPC</button>
+    <button onclick="dayMode()">Día</button>
+    <button onclick="nightMode()">Noche</button>
+  </div>
+
+  <div id="mobileControls">
+    <div class="row">
+      <button data-key="w">↑</button>
+    </div>
+    <div class="row">
+      <button data-key="a">←</button>
+      <button data-key="s">↓</button>
+      <button data-key="d">→</button>
+    </div>
+    <div class="row">
+      <button id="actionBtn">ACCIÓN</button>
+    </div>
+  </div>
+
+  <canvas id="game"></canvas>
+  <script src="main.js"></script>
+</body>
+</html>
